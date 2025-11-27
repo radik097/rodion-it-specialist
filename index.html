@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rodion Moroz - Professional IT Specialist in Melbourne. Expert in Windows repair, Android systems, and home Wi-Fi networks. Fast, practical IT solutions in Hallam, VIC.">
+    <meta name="keywords" content="IT specialist Melbourne, Windows repair, Android repair, Wi-Fi setup, network security, computer repair Hallam, tech support Victoria">
+    <meta name="author" content="Rodion Moroz">
+    <meta property="og:title" content="Rodion Moroz - IT Specialist | Windows, Android, Wi-Fi Networks">
+    <meta property="og:description" content="Professional IT services in Melbourne. Windows repair, Android systems, home network setup. Fast, practical solutions.">
+    <meta property="og:type" content="website">
+    <title>Rodion Moroz - IT Specialist | Windows, Android, Wi-Fi Networks</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #0ea5e9;
+            --accent-color: #06b6d4;
+            --dark-bg: #0f172a;
+            --dark-card: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --success-color: #10b981;
+            --gradient-1: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+            --gradient-2: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+            --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            background: var(--dark-bg);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-2);
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 2rem 4rem;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .hero .role {
+            font-size: 1.75rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .hero .location {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .hero .tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-1);
+            color: white;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            background: var(--dark-card);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .about-text h3 {
+            color: var(--text-primary);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-highlights {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(37, 99, 235, 0.05);
+            padding: 1.25rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .highlight-item i {
+            font-size: 1.75rem;
+            color: var(--secondary-color);
+            min-width: 40px;
+        }
+        
+        .highlight-item div h4 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .highlight-item div p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .stat-card {
+            background: var(--dark-card);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .stat-card i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .stat-card h4 {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .stat-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: var(--dark-card);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .skill-category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: white;
+        }
+        
+        .skill-category h3 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 0.75rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.05rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .skill-list li i {
+            color: var(--success-color);
+            font-size: 0.875rem;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            background: var(--dark-card);
+            padding: 4rem;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-card {
+            background: rgba(37, 99, 235, 0.05);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            background: rgba(37, 99, 235, 0.1);
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+        
+        .contact-card i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-card h4 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-card a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+        
+        .contact-card a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .contact-btn {
+            padding: 1.25rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+        }
+        
+        .contact-btn.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        
+        .contact-btn.telegram {
+            background: #0088cc;
+            color: white;
+        }
+        
+        .contact-btn.phone {
+            background: var(--gradient-1);
+            color: white;
+        }
+        
+        .contact-btn.email {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .languages {
+            margin-top: 3rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .languages h4 {
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .language-tags {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .language-tag {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--secondary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-card);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        footer p {
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        
+        footer .origin {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-1);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .scroll-top.visible {
+            display: flex;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            nav ul {
+                display: none;
+            }
+            
+            nav ul.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--dark-card);
+                padding: 2rem;
+                gap: 1rem;
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .role {
+                font-size: 1.35rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                padding: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .about-text {
+                padding: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">RM IT</div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="navMenu">
+                <li><a href="rodion-moroz-it-specialist-windows-android-wifi-networks-HzP5Ht_a#home">Home</a></li>
+                <li><a href="rodion-moroz-it-specialist-windows-android-wifi-networks-HzP5Ht_a#about">About</a></li>
+                <li><a href="rodion-moroz-it-specialist-windows-android-wifi-networks-HzP5Ht_a#skills">Skills</a></li>
+                <li><a href="rodion-moroz-it-specialist-windows-android-wifi-networks-HzP5Ht_a#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in-up">
+            <div class="hero-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Professional IT Services</span>
+            </div>
+            <h1>Rodion Moroz</h1>
+            <div class="role">IT Specialist</div>
+            <div class="role" style="font-size: 1.35rem; margin-top: -0.5rem;">Windows / Android / Home Wi-Fi Networks</div>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                Hallam 3803 VIC, Melbourne, Victoria, Australia
+            </div>
+            <p class="tagline">
+                Professional repair, setup, and optimisation of Windows, Android, and home Wi-Fi networks. 
+                <strong>Fast, practical, no fake "services".</strong> If it can be fixed — I fix it. 
+                If it's pointless — I say it directly.
+            </p>
+            <div class="cta-buttons">
+                <a href="rodion-moroz-it-specialist-windows-android-wifi-networks-HzP5Ht_a#contact" class="btn btn-primary">
+                    <i class="fas fa-phone-alt"></i>
+                    Get IT Support Now
+                </a>
+                <a href="rodion-moroz-it-specialist-windows-android-wifi-networks-HzP5Ht_a#skills" class="btn btn-secondary">
+                    <i class="fas fa-code"></i>
+                    View Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header fade-in-up">
+            <h2>About Me</h2>
+            <p>22-year-old IT professional from Kharkiv, Ukraine, now serving Melbourne with expertise and integrity</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text fade-in-up">
+                <h3>Professional Approach</h3>
+                <p>
+                    I bring a strong background in system administration, diagnostics, cybersecurity, and IT infrastructure. 
+                    My philosophy is simple: deliver real solutions, not unnecessary services.
+                </p>
+                <p>
+                    Whether you need Windows optimization, Android recovery, or a complete home network overhaul, 
+                    I provide honest assessments and efficient fixes. No upselling, no time-wasting — just professional IT support.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Honest Diagnostics</h4>
+                            <p>I tell you what's really wrong, not what makes money</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-bolt"></i>
+                        <div>
+                            <h4>Fast Solutions</h4>
+                            <p>Quick turnaround without compromising quality</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>Security Focused</h4>
+                            <p>Cybersecurity expertise for your peace of mind</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-stats fade-in-up">
+                <div class="stat-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>22</h4>
+                    <p>Years Old</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-globe"></i>
+                    <h4>Ukraine</h4>
+                    <p>Originally from Kharkiv</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Windows</h4>
+                    <p>Repair & Optimization</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Android</h4>
+                    <p>System Recovery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header fade-in-up">
+            <h2>Services & Expertise</h2>
+            <p>Comprehensive IT solutions across multiple platforms and technologies</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category fade-in-up">
+                <div class="skill-category-header">
+                    <div class="skill-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3>Windows Systems</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Windows repair & troubleshooting</li>
+                    <li><i class="fas fa-check"></i> System reinstallation & migration</li>
+                    <li><i class="fas fa-check"></i> Performance optimization</li>
+                    <li><i class="fas fa-check"></i> Driver updates & configuration</li>
+                    <li><i class="fas fa-check"></i> Software installation & setup</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category fade-in-up">
+                <div class="skill-category-header">
+                    <div class="skill-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h3>Android Devices</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Android flashing & custom ROMs</li>
+                    <li><i class="fas fa-check"></i> ADB/Fastboot operations</li>
+                    <li><i class="fas fa-check"></i> System recovery & unbrick</li>
+                    <li><i class="fas fa-check"></i> Root & bootloader unlock</li>
+                    <li><i class="fas fa-check"></i> Data backup & restoration</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category fade-in-up">
+                <div class="skill-category-header">
+                    <div class="skill-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Network Solutions</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Router/Wi-Fi setup & configuration</li>
+                    <li><i class="fas fa-check"></i> NAT, DHCP, DNS optimization</li>
+                    <li><i class="fas fa-check"></i> Mesh networks & extenders</li>
+                    <li><i class="fas fa-check"></i> Home network planning</li>
+                    <li><i class="fas fa-check"></i> Network security hardening</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category fade-in-up">
+                <div class="skill-category-header">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Security & Diagnostics</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Malware & virus removal</li>
+                    <li><i class="fas fa-check"></i> Full hardware diagnostics</li>
+                    <li><i class="fas fa-check"></i> Software diagnostics & repair</li>
+                    <li><i class="fas fa-check"></i> Network security audits</li>
+                    <li><i class="fas fa-check"></i> Performance tuning</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category fade-in-up">
+                <div class="skill-category-header">
+                    <div class="skill-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Smart Home</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Smart home integrations</li>
+                    <li><i class="fas fa-check"></i> IoT device setup</li>
+                    <li><i class="fas fa-check"></i> Home automation systems</li>
+                    <li><i class="fas fa-check"></i> Device connectivity</li>
+                    <li><i class="fas fa-check"></i> Network optimization for IoT</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category fade-in-up">
+                <div class="skill-category-header">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Management</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Data backup solutions</li>
+                    <li><i class="fas fa-check"></i> Data restoration & recovery</li>
+                    <li><i class="fas fa-check"></i> Cloud storage setup</li>
+                    <li><i class="fas fa-check"></i> File migration & transfer</li>
+                    <li><i class="fas fa-check"></i> Secure data handling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header fade-in-up">
+            <h2>Get in Touch</h2>
+            <p>Multiple ways to reach me for fast IT support</p>
+        </div>
+        <div class="contact-container fade-in-up">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Phone</h4>
+                    <a href="tel:+61410356376">+61 410 356 376</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-telegram"></i>
+                    <h4>Telegram</h4>
+                    <a href="https://t.me/description0092" target="_blank">@description0092</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/61410356376" target="_blank">+61 410 356 376</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:rodionaustralia@gmail.com">rodionaustralia@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-buttons">
+                <a href="https://wa.me/61410356376" class="contact-btn whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp Me
+                </a>
+                <a href="https://t.me/description0092" class="contact-btn telegram" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                    Telegram Chat
+                </a>
+                <a href="tel:+61410356376" class="contact-btn phone">
+                    <i class="fas fa-phone-alt"></i>
+                    Call Now
+                </a>
+                <a href="mailto:rodionaustralia@gmail.com" class="contact-btn email">
+                    <i class="fas fa-envelope"></i>
+                    Send Email
+                </a>
+            </div>
+            
+            <div class="languages">
+                <h4><i class="fas fa-language"></i> Languages Supported</h4>
+                <div class="language-tags">
+                    <span class="language-tag">🇬🇧 English</span>
+                    <span class="language-tag">🇺🇦 Ukrainian</span>
+                    <span class="language-tag">🇷🇺 Russian</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rodion Moroz IT Specialist. All rights reserved.</p>
+        <p class="origin">Proudly serving Melbourne from Kharkiv, Ukraine 🇺🇦</p>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking on a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+        
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+      <script>
+        const createFloatingBall = ()=>{let a=document.createElement("style");a.textContent=`
+          .fellou-floating-ball {
+              position: fixed;
+              bottom: 20px;
+              right: 20px;
+              background: #fff;
+              border-radius: 50%;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              display: flex;
+              gap: 8px;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: all 0.15s ease;
+              z-index: 100000;
+              width: 28px;
+              height: 28px;
+              text-align: center;
+              border: 2px solid #f4f4f4;
+          }
+
+          .fellou-floating-ball:hover {
+              width: 140px;
+              border-radius: 99px;
+          }
+
+          .fellou-floating-ball svg {
+              width: 16px;
+              height: 16px;
+          }
+
+          .fellou-floating-ball-text {
+              display: none;
+              width: 0px;
+              transition: width 0.3s ease;
+              color: #595561;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px;
+              white-space: nowrap;
+              overflow: hidden;
+           
+          }
+
+          .fellou-floating-ball:hover .fellou-floating-ball-text {
+              display: block;
+              width: 100px;
+          }
+      105.924C86.0565 134.694 46.2518 141.036 21.2904 120.091C-3.67096 99.1459 -4.33674 58.8446 19.8034 30.0755C43.9435 1.30644 83.7482 -5.03614 108.71 15.909ZM102.282 23.5694C81.8118 6.39315 48.2407 11.7425 27.4638 36.5034C6.68694 61.2643 7.24845 95.2543 27.7183 112.431C48.1882 129.607 81.7593 124.258 102.536 99.4966C123.313 74.7357 122.752 40.7457 102.282 23.5694Z" fill="url(#paint0_linear_34_1408)"/>
+              <path d="M116.986 29.3811C141.525 49.9712 143.286 88.2698 120.921 114.924C98.5561 141.577 60.5333 146.493 35.995 125.903C11.4567 105.313 9.69493 67.0139 32.06 40.3602C54.4252 13.7065 92.4479 8.79095 116.986 29.3811ZM110.558 37.0415C90.3987 20.1255 58.6488 24.2301 39.7205 46.788C20.7921 69.346 22.2632 101.326 42.4229 118.242C62.5825 135.158 94.3324 131.054 113.261 108.496C132.189 85.9377 130.718 53.9574 110.558 37.0415Z" fill="url(#paint1_linear_34_1408)"/>
+              <path d="M131.544 35.0694C155.71 55.3471 155.731 95.1074 131.591 123.876C107.451 152.646 68.291 159.529 44.1249 139.251C19.9589 118.974 19.9379 79.2135 44.078 50.4444C68.2182 21.6753 107.378 14.7917 131.544 35.0694ZM125.116 42.7299C105.505 26.2745 72.5526 32.067 51.7385 56.8723C30.9244 81.6776 30.9421 115.136 50.5528 131.591C70.1636 148.046 103.116 142.254 123.931 117.449C144.745 92.6433 144.727 59.1852 125.116 42.7299Z" fill="url(#paint2_linear_34_1408)"/>
+              <defs>
+                  <linearGradient id="paint0_linear_34_1408" x1="108.71" y1="15.909" x2="21.2904" y2="120.091" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6401F8" stop-opacity="0.7"/>
+                      <stop offset="0.465" stop-color="#FF9000" stop-opacity="0.42"/>
+                      <stop offset="1" stop-color="#33B3FF" stop-opacity="0.2"/>
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_34_1408" x1="116.986" y1="29.381" x2="35.995" y2="125.903" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6401F8" stop-opacity="0.7"/>
+                      <stop offset="0.465" stop-color="#FF9000" stop-opacity="0.42"/>
+                      <stop offset="1" stop-color="#33B3FF" stop-opacity="0.2"/>
+                  </linearGradient>
+                  <linearGradient id="paint2_linear_34_1408" x1="131.544" y1="35.0694" x2="44.1249" y2="139.251" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6401F8"/>
+                      <stop offset="0.5" stop-color="#FF9000"/>
+                      <stop offset="1" stop-color="#33B3FF"/>
+                  </linearGradient>
+              </defs>
+          </svg>
+      `;let c=document.createElement("div");c.className="fellou-floating-ball-text",c.textContent="powered by fellou",b.appendChild(c),document.body.appendChild(b)};
+        // Call createFloatingBall when the page loads
+        window.addEventListener('load', createFloatingBall);
+      </script>
+    </body>
+</html>
